@@ -130,6 +130,10 @@ def find_product_row(data, product_name):
 
 def select_product(product_name):
     st.session_state["selected_product_name"] = product_name
+    st.session_state["scroll_to_product_detail"] = True
+    st.session_state["product_detail_scroll_nonce"] = (
+        st.session_state.get("product_detail_scroll_nonce", 0) + 1
+    )
 
 
 def clear_selected_product():
@@ -323,19 +327,45 @@ def searchable_table(data):
 
 def show_product_detail(product, price_df, segment_df, full_df):
     product_name = product["product_name"]
+    scroll_nonce = st.session_state.get("product_detail_scroll_nonce", 0)
+    anchor_id = f"product-detail-anchor-{scroll_nonce}"
 
-    st.markdown('<div id="product-detail-anchor"></div>', unsafe_allow_html=True)
-    components.html(
-        """
-        <script>
-        const anchor = window.parent.document.getElementById("product-detail-anchor");
-        if (anchor) {
-            anchor.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-        </script>
-        """,
-        height=0
+    st.markdown(
+        f'<div id="{anchor_id}" style="scroll-margin-top: 12px;"></div>',
+        unsafe_allow_html=True
     )
+
+    if st.session_state.pop("scroll_to_product_detail", False):
+        components.html(
+            f"""
+            <script>
+            const anchorId = "{anchor_id}";
+            let tries = 0;
+
+            function scrollToProductDetail() {{
+                const parentWindow = window.parent;
+                const doc = parentWindow.document;
+                const anchor = doc.getElementById(anchorId);
+
+                if (anchor) {{
+                    const top = anchor.getBoundingClientRect().top + parentWindow.scrollY - 12;
+                    parentWindow.scrollTo({{ top: Math.max(top, 0), behavior: "smooth" }});
+                    return;
+                }}
+
+                tries += 1;
+                if (tries < 8) {{
+                    setTimeout(scrollToProductDetail, 150);
+                }} else {{
+                    parentWindow.scrollTo({{ top: 0, behavior: "smooth" }});
+                }}
+            }}
+
+            setTimeout(scrollToProductDetail, 150);
+            </script>
+            """,
+            height=0
+        )
 
     st.divider()
 
@@ -400,12 +430,9 @@ def product_card(product):
         f"{int(product['buyer_count']):,} lượt mua".replace(",", ".")
     )
 
-    st.button(
-        "Xem chi tiết",
-        key=f"product_detail_{slugify(product_name)}",
-        on_click=select_product,
-        args=(product_name,)
-    )
+    if st.button("Xem chi tiết", key=f"product_detail_{slugify(product_name)}"):
+        select_product(product_name)
+        rerun_app()
 
 
 def get_related_products(data, selected_product):
