@@ -1,14 +1,20 @@
 from pathlib import Path
+import re
 from textwrap import fill
+import unicodedata
 
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_PATH = BASE_DIR / "data" / "data.csv"
 OUTPUT_DIR = BASE_DIR / "output"
+IMAGE_DIR = BASE_DIR / "data" / "images"
+PRODUCT_IMAGE_DIR = IMAGE_DIR / "products"
+PLACEHOLDER_IMAGE_DIR = IMAGE_DIR / "placeholders"
 
 PRICE_RESULT_PATH = OUTPUT_DIR / "kmeans_price_result.csv"
 SEGMENT_RESULT_PATH = OUTPUT_DIR / "kmeans_product_segment_result.csv"
@@ -23,8 +29,12 @@ st.set_page_config(
 
 
 @st.cache_data
-def load_csv(path):
+def load_csv(path, modified_time):
     return pd.read_csv(path, encoding="utf-8-sig")
+
+
+def read_csv(path):
+    return load_csv(path, path.stat().st_mtime)
 
 
 def format_price(value):
@@ -33,6 +43,14 @@ def format_price(value):
 
 def wrap_label(value, width=16):
     return fill(str(value), width=width)
+
+
+def slugify(value):
+    text = str(value).replace("Đ", "D").replace("đ", "d")
+    text = unicodedata.normalize("NFKD", text)
+    text = text.encode("ascii", "ignore").decode("ascii")
+    text = re.sub(r"[^a-zA-Z0-9]+", "-", text).strip("-").lower()
+    return text or "unknown"
 
 
 def display_label(value):
@@ -59,6 +77,90 @@ def prepare_data(data):
             )
 
     return data
+
+
+def load_result_if_exists(path):
+    if path.exists():
+        return prepare_data(read_csv(path))
+
+    return pd.DataFrame()
+
+
+def find_local_image(product):
+    product_name = product.get("product_name", "")
+    category = product.get("category", "")
+
+    if "image_url" in product and pd.notna(product["image_url"]):
+        image_url = str(product["image_url"]).strip()
+
+        if image_url.startswith(("http://", "https://")):
+            return image_url
+
+    if "image_path" in product and pd.notna(product["image_path"]):
+        candidate = BASE_DIR / str(product["image_path"])
+
+        if candidate.exists():
+            return candidate
+
+    product_slug = slugify(product_name)
+
+    for extension in [".jpg", ".jpeg", ".png", ".webp", ".svg"]:
+        candidate = PRODUCT_IMAGE_DIR / f"{product_slug}{extension}"
+
+        if candidate.exists():
+            return candidate
+
+    category_slug = slugify(category)
+    category_placeholder = PLACEHOLDER_IMAGE_DIR / f"{category_slug}.svg"
+
+    if category_placeholder.exists():
+        return category_placeholder
+
+    return PLACEHOLDER_IMAGE_DIR / "default.svg"
+
+
+def find_product_row(data, product_name):
+    matched = data[data["product_name"] == product_name]
+
+    if matched.empty:
+        return None
+
+    return matched.iloc[0]
+
+
+def select_product(product_name):
+    st.session_state["selected_product_name"] = product_name
+
+
+def clear_selected_product():
+    st.session_state.pop("selected_product_name", None)
+
+
+def rerun_app():
+    if hasattr(st, "rerun"):
+        st.rerun()
+    elif hasattr(st, "experimental_rerun"):
+        st.experimental_rerun()
+
+
+def get_product_description(product):
+    if "description" in product and pd.notna(product["description"]):
+        return str(product["description"])
+
+    product_name = product["product_name"]
+    category = product["category"]
+    shop_name = product["shop_name"]
+    price = format_price(product["price"])
+    buyer_count = f"{int(product['buyer_count']):,}".replace(",", ".")
+    rating = product["rating"]
+
+    return (
+        f"{product_name} là sản phẩm thuộc danh mục {category}, được bán bởi "
+        f"{shop_name}. Sản phẩm có giá {price}, hiện ghi nhận "
+        f"{buyer_count} lượt mua và điểm đánh giá {rating}/5. "
+        f"Dựa trên các thông tin này, sản phẩm được đưa vào các mô hình K-Means "
+        f"để phân tích nhóm giá, mức độ quan tâm của người mua và đặc điểm tổng hợp."
+    )
 
 
 def show_missing_file(path, command):
@@ -219,6 +321,179 @@ def searchable_table(data):
     )
 
 
+def show_product_detail(product, price_df, segment_df, full_df):
+    product_name = product["product_name"]
+
+    st.markdown('<div id="product-detail-anchor"></div>', unsafe_allow_html=True)
+    components.html(
+        """
+        <script>
+        const anchor = window.parent.document.getElementById("product-detail-anchor");
+        if (anchor) {
+            anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        </script>
+        """,
+        height=0
+    )
+
+    st.divider()
+
+    title_col, action_col = st.columns([5, 1])
+
+    with title_col:
+        st.subheader(product_name)
+
+    with action_col:
+        st.button(
+            "Quay lại danh sách",
+            on_click=clear_selected_product
+        )
+
+    image_col, info_col = st.columns([1, 2])
+
+    with image_col:
+        st.image(
+            str(find_local_image(product)),
+            use_container_width=True
+        )
+
+    with info_col:
+        st.metric("Giá bán", format_price(product["price"]))
+        st.write(f"**Shop:** {product['shop_name']}")
+        st.write(f"**Danh mục:** {product['category']}")
+        st.write(f"**Lượt mua:** {int(product['buyer_count']):,}".replace(",", "."))
+        st.write(f"**Đánh giá:** {product['rating']}")
+
+        st.write("### Mô tả sản phẩm")
+        st.write(get_product_description(product))
+
+        price_row = find_product_row(price_df, product_name)
+        segment_row = find_product_row(segment_df, product_name)
+        full_row = find_product_row(full_df, product_name)
+
+        st.write("### Kết quả phân cụm")
+
+        if price_row is not None and "price_group" in price_row:
+            st.write(f"**Nhóm giá:** {display_label(price_row['price_group'])}")
+
+        if segment_row is not None and "product_segment" in segment_row:
+            st.write(f"**Nhóm sản phẩm:** {display_label(segment_row['product_segment'])}")
+
+        if full_row is not None and "cluster_meaning" in full_row:
+            st.write(f"**Cụm full feature:** {full_row['cluster_meaning']}")
+        elif full_row is not None and "cluster" in full_row:
+            st.write(f"**Cụm full feature:** Cụm {full_row['cluster']}")
+
+
+def product_card(product):
+    product_name = product["product_name"]
+
+    st.image(
+        str(find_local_image(product)),
+        use_container_width=True
+    )
+    st.markdown(f"**{product_name}**")
+    st.markdown(f"<span style='color:#ee4d2d;font-size:18px'>{format_price(product['price'])}</span>", unsafe_allow_html=True)
+    st.caption(
+        f"{product['category']} | ⭐ {product['rating']} | "
+        f"{int(product['buyer_count']):,} lượt mua".replace(",", ".")
+    )
+
+    st.button(
+        "Xem chi tiết",
+        key=f"product_detail_{slugify(product_name)}",
+        on_click=select_product,
+        args=(product_name,)
+    )
+
+
+def get_related_products(data, selected_product):
+    product_name = selected_product["product_name"]
+    category = selected_product["category"]
+
+    related = data[data["product_name"] != product_name].copy()
+    same_category = related[related["category"] == category]
+    other_category = related[related["category"] != category]
+
+    same_category = same_category.sort_values(
+        ["buyer_count", "rating"],
+        ascending=[False, False]
+    )
+    other_category = other_category.sort_values(
+        ["buyer_count", "rating"],
+        ascending=[False, False]
+    )
+
+    return pd.concat([same_category, other_category])
+
+
+def show_related_products(data, selected_product):
+    related_products = get_related_products(data, selected_product)
+
+    st.write("### Sản phẩm liên quan")
+    st.caption(
+        "Ưu tiên hiển thị sản phẩm cùng danh mục trước, sau đó đến các danh mục khác."
+    )
+
+    for start in range(0, min(len(related_products), 12), 4):
+        columns = st.columns(4)
+        rows = related_products.iloc[start:start + 4]
+
+        for offset, (_, product) in enumerate(rows.iterrows()):
+            with columns[offset]:
+                product_card(product)
+
+
+def product_gallery(data, price_df, segment_df, full_df):
+    st.subheader("Danh sách sản phẩm")
+
+    search = st.text_input(
+        "Tìm kiếm trong danh sách sản phẩm",
+        placeholder="Nhập tên sản phẩm, shop hoặc danh mục...",
+        key="product_gallery_search"
+    )
+
+    filtered = data.copy()
+    category_options = ["Tất cả"] + sorted(filtered["category"].dropna().unique())
+    selected_category = st.selectbox(
+        "Lọc danh mục sản phẩm",
+        category_options,
+        key="product_gallery_category"
+    )
+
+    if selected_category != "Tất cả":
+        filtered = filtered[filtered["category"] == selected_category]
+
+    if search:
+        keyword = search.strip()
+        filtered = filtered[
+            filtered["product_name"].str.contains(keyword, case=False, na=False)
+            | filtered["shop_name"].str.contains(keyword, case=False, na=False)
+            | filtered["category"].str.contains(keyword, case=False, na=False)
+        ]
+
+    st.caption(f"Tìm thấy {len(filtered)} sản phẩm")
+
+    selected_product_name = st.session_state.get("selected_product_name")
+
+    if selected_product_name:
+        selected_product = find_product_row(data, selected_product_name)
+
+        if selected_product is not None:
+            show_product_detail(selected_product, price_df, segment_df, full_df)
+            show_related_products(data, selected_product)
+            return
+
+    for start in range(0, len(filtered), 4):
+        columns = st.columns(4)
+        rows = filtered.iloc[start:start + 4]
+
+        for offset, (_, product) in enumerate(rows.iterrows()):
+            with columns[offset]:
+                product_card(product)
+
+
 def main():
     st.title("Dashboard K-Means Sản Phẩm Shopee")
     st.write(
@@ -230,7 +505,10 @@ def main():
         st.error(f"Không tìm thấy `{DATA_PATH.relative_to(BASE_DIR)}`.")
         return
 
-    dataset = prepare_data(load_csv(DATA_PATH))
+    dataset = prepare_data(read_csv(DATA_PATH))
+    price_result_df = load_result_if_exists(PRICE_RESULT_PATH)
+    segment_result_df = load_result_if_exists(SEGMENT_RESULT_PATH)
+    full_feature_result_df = load_result_if_exists(FULL_FEATURE_RESULT_PATH)
 
     total_products = len(dataset)
     average_price = dataset["price"].mean()
@@ -243,9 +521,10 @@ def main():
     metric_cols[2].metric("Tổng lượt mua", f"{int(total_buyers):,}".replace(",", "."))
     metric_cols[3].metric("Đánh giá trung bình", f"{average_rating:.2f}")
 
-    dataset_tab, price_tab, segment_tab, full_feature_tab = st.tabs(
+    dataset_tab, product_tab, price_tab, segment_tab, full_feature_tab = st.tabs(
         [
             "Dữ liệu & Tìm kiếm",
+            "Sản phẩm",
             "K-Means Giá bán",
             "K-Means Hot/Ít mua/Đánh giá",
             "K-Means Đầy đủ đặc trưng"
@@ -255,11 +534,19 @@ def main():
     with dataset_tab:
         searchable_table(dataset)
 
+    with product_tab:
+        product_gallery(
+            dataset,
+            price_result_df,
+            segment_result_df,
+            full_feature_result_df
+        )
+
     with price_tab:
         st.subheader("Phân cụm theo giá bán")
 
         if PRICE_RESULT_PATH.exists():
-            price_df = prepare_data(load_csv(PRICE_RESULT_PATH))
+            price_df = prepare_data(read_csv(PRICE_RESULT_PATH))
 
             cols = st.columns([1, 1])
 
@@ -297,7 +584,7 @@ def main():
         st.subheader("Phân cụm sản phẩm hot, ít người mua, đánh giá cao")
 
         if SEGMENT_RESULT_PATH.exists():
-            segment_df = prepare_data(load_csv(SEGMENT_RESULT_PATH))
+            segment_df = prepare_data(read_csv(SEGMENT_RESULT_PATH))
 
             cols = st.columns([1, 1])
 
@@ -337,7 +624,7 @@ def main():
         )
 
         if FULL_FEATURE_RESULT_PATH.exists():
-            full_df = prepare_data(load_csv(FULL_FEATURE_RESULT_PATH))
+            full_df = prepare_data(read_csv(FULL_FEATURE_RESULT_PATH))
 
             cols = st.columns([1, 1])
 

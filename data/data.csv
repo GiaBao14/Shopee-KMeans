@@ -1,72 +1,72 @@
-product_name,shop_name,price,category,buyer_count,rating
-iPhone 15 128GB,Apple Flagship Store,21990000,Điện thoại,1200,4.9
-Samsung Galaxy S24,Samsung Official Store,18990000,Điện thoại,950,4.8
-Xiaomi Redmi Note 13,Xiaomi Authorized Store,5990000,Điện thoại,2100,4.7
-OPPO Reno11 F,OPPO Official Shop,8990000,Điện thoại,870,4.8
-Vivo V30e,Vivo Official Store,8290000,Điện thoại,620,4.7
-Realme C67,Realme Brand Store,4690000,Điện thoại,1800,4.6
-iPad Air M2,Apple Flagship Store,16990000,Tablet,430,4.9
-Samsung Galaxy Tab S9,Samsung Official Store,18990000,Tablet,310,4.8
-Laptop MSI Gaming GF63,GearVN,23490000,Laptop,420,4.8
-MacBook Air M2 13 inch,Apple Flagship Store,27990000,Laptop,530,4.9
-ASUS TUF Gaming F15,ASUS Official Store,24990000,Laptop,310,4.7
-Acer Nitro 5,Acer Mall,21990000,Laptop,450,4.8
-Lenovo LOQ Gaming,Lenovo Official,23990000,Laptop,290,4.7
-Dell Inspiron 15,Dell Authorized Store,18990000,Laptop,370,4.6
-Chuột Logitech G102,Logitech G Official,329000,Gaming,3500,4.9
-Bàn phím cơ RK61,Royal Kludge Official,890000,Gaming,1800,4.8
-Tai nghe Razer BlackShark V2,Razer Official Store,1490000,Gaming,920,4.8
-Lót chuột gaming XXL,Gaming Gear VN,199000,Gaming,2600,4.6
-Màn hình LG UltraGear 24GN65R,LG Official Store,4290000,Gaming,670,4.8
-Tay cầm Xbox Wireless,Xbox Official Store,1290000,Gaming,540,4.7
-Ghế gaming E-Dra,E-Dra Official,3290000,Gaming,320,4.6
-Áo Hoodie Unisex Local Brand,TSUN Store,320000,Thời trang,2800,4.7
-Quần jean nam form rộng,YODY Official,450000,Thời trang,1700,4.8
-Giày Nike Air Force 1,Nike Official Store,2490000,Thời trang,1100,4.9
-Túi đeo chéo nữ thời trang,Elly Official,390000,Thời trang,950,4.7
-Áo thun oversize basic,DirtyCoins Official,280000,Thời trang,2200,4.8
-Áo sơ mi nam công sở,Routine Official,420000,Thời trang,980,4.6
-Váy nữ Hàn Quốc,Lamer Fashion,520000,Thời trang,760,4.7
-Nồi chiên không dầu LocknLock,LocknLock Official,2190000,Gia dụng,830,4.8
-Máy hút bụi Xiaomi,Xiaomi Home,3290000,Gia dụng,540,4.7
-Quạt mini cầm tay Jisulife,Jisulife Official,199000,Gia dụng,4100,4.8
-Máy xay sinh tố Bear,Bear Official Store,690000,Gia dụng,1500,4.7
-Đèn ngủ LED cảm ứng,Mini Home Decor,159000,Gia dụng,2600,4.6
-Máy lọc không khí Sharp,Sharp Mall,4590000,Gia dụng,420,4.8
-Bếp từ Electrolux,Electrolux Official,3290000,Gia dụng,390,4.7
-Tai nghe Bluetooth JBL Tune 520BT,JBL Official Store,1190000,Âm thanh,1750,4.8
-Loa Bluetooth Sony SRS-XB13,Sony Official Store,1390000,Âm thanh,980,4.9
-Micro thu âm HyperX SoloCast,HyperX Official,1290000,Âm thanh,640,4.7
-Tai nghe AirPods Pro 2,Apple Flagship Store,5990000,Âm thanh,870,4.9
-Soundbar Samsung HW-T420,Samsung Official Store,2490000,Âm thanh,320,4.7
-Camera Wifi Ezviz C6N,Ezviz Official Store,790000,Thiết bị thông minh,1300,4.8
-Đồng hồ Xiaomi Redmi Watch 4,Xiaomi Authorized Store,2390000,Thiết bị thông minh,860,4.7
-Robot hút bụi Dreame,Dreame Official Store,5990000,Thiết bị thông minh,540,4.8
-Ổ cắm điện thông minh TP-Link,TP-Link Official,450000,Thiết bị thông minh,980,4.6
-Máy in Canon Pixma G3010,Canon Official Store,4290000,Văn phòng,430,4.7
-Ghế công thái học Sihoo,Sihoo Official Store,5890000,Văn phòng,310,4.8
-Bàn học gỗ hiện đại,Modern Home,2490000,Nội thất,620,4.7
-Kệ sách 5 tầng,Home Decor VN,1590000,Nội thất,540,4.6
-Nước hoa Dior Sauvage,Dior Beauty Official,890000,Làm đẹp,730,4.9
-Máy rửa mặt Foreo Luna,Foreo Official Store,3290000,Làm đẹp,410,4.8
-Serum Vitamin C La Roche-Posay,La Roche-Posay Official,850000,Làm đẹp,1200,4.9
-Apple Watch Series 9,Apple Flagship Store,11990000,Thiết bị thông minh,740,4.9
-Samsung Galaxy Watch 6,Samsung Official Store,8990000,Thiết bị thông minh,620,4.8
-iPhone 14 Pro Max,Apple Flagship Store,25990000,Điện thoại,980,4.9
-ASUS ROG Zephyrus G14,ASUS Official Store,35990000,Laptop,210,4.9
-Lenovo Legion 5,Lenovo Official,28990000,Laptop,340,4.8
-MacBook Pro M3,Apple Flagship Store,42990000,Laptop,180,4.9
-AirPods 3,Apple Flagship Store,4290000,Âm thanh,1300,4.8
-Sony WH-1000XM5,Sony Official Store,7990000,Âm thanh,540,4.9
-Chuột Logitech G Pro X Superlight,Logitech G Official,3490000,Gaming,780,4.9
-Bàn phím Logitech G913,Logitech G Official,4290000,Gaming,430,4.8
-RTX 4070 Gaming OC,Gigabyte Official,18990000,Linh kiện PC,150,4.9
-CPU Intel Core i7 14700K,Intel Official Store,10990000,Linh kiện PC,290,4.8
-SSD Samsung 980 Pro 1TB,Samsung Official Store,2490000,Linh kiện PC,860,4.8
-RAM Kingston Fury 32GB,Kingston Official,3290000,Linh kiện PC,740,4.7
-Máy pha cà phê Delonghi,Delonghi Official,6990000,Gia dụng,260,4.8
-Máy lạnh Daikin Inverter,Daikin Official,12990000,Gia dụng,190,4.7
-Tủ lạnh Panasonic 420L,Panasonic Mall,15990000,Gia dụng,170,4.8
-Bàn gaming chữ Z,Gaming Setup VN,2490000,Nội thất,620,4.7
-Đèn LED RGB Gaming,Gaming Gear VN,590000,Gaming,2100,4.8
-Camera hành trình Xiaomi,Xiaomi Authorized Store,1890000,Thiết bị thông minh,930,4.7
+﻿"product_name","shop_name","price","category","buyer_count","rating","image_url"
+"iPhone 15 128GB","Apple Flagship Store","21990000","Điện thoại","1200","4.9","https://tse1.mm.bing.net/th?q=iPhone%2015%20128GB%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Samsung Galaxy S24","Samsung Official Store","18990000","Điện thoại","950","4.8","https://tse1.mm.bing.net/th?q=Samsung%20Galaxy%20S24%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Xiaomi Redmi Note 13","Xiaomi Authorized Store","5990000","Điện thoại","2100","4.7","https://tse1.mm.bing.net/th?q=Xiaomi%20Redmi%20Note%2013%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"OPPO Reno11 F","OPPO Official Shop","8990000","Điện thoại","870","4.8","https://tse1.mm.bing.net/th?q=OPPO%20Reno11%20F%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Vivo V30e","Vivo Official Store","8290000","Điện thoại","620","4.7","https://tse1.mm.bing.net/th?q=Vivo%20V30e%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Realme C67","Realme Brand Store","4690000","Điện thoại","1800","4.6","https://tse1.mm.bing.net/th?q=Realme%20C67%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"iPad Air M2","Apple Flagship Store","16990000","Tablet","430","4.9","https://tse1.mm.bing.net/th?q=iPad%20Air%20M2%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Samsung Galaxy Tab S9","Samsung Official Store","18990000","Tablet","310","4.8","https://tse1.mm.bing.net/th?q=Samsung%20Galaxy%20Tab%20S9%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Laptop MSI Gaming GF63","GearVN","23490000","Laptop","420","4.8","https://tse1.mm.bing.net/th?q=Laptop%20MSI%20Gaming%20GF63%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"MacBook Air M2 13 inch","Apple Flagship Store","27990000","Laptop","530","4.9","https://tse1.mm.bing.net/th?q=MacBook%20Air%20M2%2013%20inch%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"ASUS TUF Gaming F15","ASUS Official Store","24990000","Laptop","310","4.7","https://tse1.mm.bing.net/th?q=ASUS%20TUF%20Gaming%20F15%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Acer Nitro 5","Acer Mall","21990000","Laptop","450","4.8","https://tse1.mm.bing.net/th?q=Acer%20Nitro%205%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Lenovo LOQ Gaming","Lenovo Official","23990000","Laptop","290","4.7","https://tse1.mm.bing.net/th?q=Lenovo%20LOQ%20Gaming%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Dell Inspiron 15","Dell Authorized Store","18990000","Laptop","370","4.6","https://tse1.mm.bing.net/th?q=Dell%20Inspiron%2015%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Chuột Logitech G102","Logitech G Official","329000","Gaming","3500","4.9","https://tse1.mm.bing.net/th?q=Chu%E1%BB%99t%20Logitech%20G102%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Bàn phím cơ RK61","Royal Kludge Official","890000","Gaming","1800","4.8","https://tse1.mm.bing.net/th?q=B%C3%A0n%20ph%C3%ADm%20c%C6%A1%20RK61%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Tai nghe Razer BlackShark V2","Razer Official Store","1490000","Gaming","920","4.8","https://tse1.mm.bing.net/th?q=Tai%20nghe%20Razer%20BlackShark%20V2%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Lót chuột gaming XXL","Gaming Gear VN","199000","Gaming","2600","4.6","https://tse1.mm.bing.net/th?q=L%C3%B3t%20chu%E1%BB%99t%20gaming%20XXL%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Màn hình LG UltraGear 24GN65R","LG Official Store","4290000","Gaming","670","4.8","https://tse1.mm.bing.net/th?q=M%C3%A0n%20h%C3%ACnh%20LG%20UltraGear%2024GN65R%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Tay cầm Xbox Wireless","Xbox Official Store","1290000","Gaming","540","4.7","https://tse1.mm.bing.net/th?q=Tay%20c%E1%BA%A7m%20Xbox%20Wireless%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Ghế gaming E-Dra","E-Dra Official","3290000","Gaming","320","4.6","https://tse1.mm.bing.net/th?q=Gh%E1%BA%BF%20gaming%20E-Dra%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Áo Hoodie Unisex Local Brand","TSUN Store","320000","Thời trang","2800","4.7","https://tse1.mm.bing.net/th?q=%C3%81o%20Hoodie%20Unisex%20Local%20Brand%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Quần jean nam form rộng","YODY Official","450000","Thời trang","1700","4.8","https://tse1.mm.bing.net/th?q=Qu%E1%BA%A7n%20jean%20nam%20form%20r%E1%BB%99ng%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Giày Nike Air Force 1","Nike Official Store","2490000","Thời trang","1100","4.9","https://tse1.mm.bing.net/th?q=Gi%C3%A0y%20Nike%20Air%20Force%201%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Túi đeo chéo nữ thời trang","Elly Official","390000","Thời trang","950","4.7","https://tse1.mm.bing.net/th?q=T%C3%BAi%20%C4%91eo%20ch%C3%A9o%20n%E1%BB%AF%20th%E1%BB%9Di%20trang%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Áo thun oversize basic","DirtyCoins Official","280000","Thời trang","2200","4.8","https://tse1.mm.bing.net/th?q=%C3%81o%20thun%20oversize%20basic%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Áo sơ mi nam công sở","Routine Official","420000","Thời trang","980","4.6","https://tse1.mm.bing.net/th?q=%C3%81o%20s%C6%A1%20mi%20nam%20c%C3%B4ng%20s%E1%BB%9F%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Váy nữ Hàn Quốc","Lamer Fashion","520000","Thời trang","760","4.7","https://tse1.mm.bing.net/th?q=V%C3%A1y%20n%E1%BB%AF%20H%C3%A0n%20Qu%E1%BB%91c%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Nồi chiên không dầu LocknLock","LocknLock Official","2190000","Gia dụng","830","4.8","https://tse1.mm.bing.net/th?q=N%E1%BB%93i%20chi%C3%AAn%20kh%C3%B4ng%20d%E1%BA%A7u%20LocknLock%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Máy hút bụi Xiaomi","Xiaomi Home","3290000","Gia dụng","540","4.7","https://tse1.mm.bing.net/th?q=M%C3%A1y%20h%C3%BAt%20b%E1%BB%A5i%20Xiaomi%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Quạt mini cầm tay Jisulife","Jisulife Official","199000","Gia dụng","4100","4.8","https://tse1.mm.bing.net/th?q=Qu%E1%BA%A1t%20mini%20c%E1%BA%A7m%20tay%20Jisulife%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Máy xay sinh tố Bear","Bear Official Store","690000","Gia dụng","1500","4.7","https://tse1.mm.bing.net/th?q=M%C3%A1y%20xay%20sinh%20t%E1%BB%91%20Bear%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Đèn ngủ LED cảm ứng","Mini Home Decor","159000","Gia dụng","2600","4.6","https://tse1.mm.bing.net/th?q=%C4%90%C3%A8n%20ng%E1%BB%A7%20LED%20c%E1%BA%A3m%20%E1%BB%A9ng%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Máy lọc không khí Sharp","Sharp Mall","4590000","Gia dụng","420","4.8","https://tse1.mm.bing.net/th?q=M%C3%A1y%20l%E1%BB%8Dc%20kh%C3%B4ng%20kh%C3%AD%20Sharp%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Bếp từ Electrolux","Electrolux Official","3290000","Gia dụng","390","4.7","https://tse1.mm.bing.net/th?q=B%E1%BA%BFp%20t%E1%BB%AB%20Electrolux%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Tai nghe Bluetooth JBL Tune 520BT","JBL Official Store","1190000","Âm thanh","1750","4.8","https://tse1.mm.bing.net/th?q=Tai%20nghe%20Bluetooth%20JBL%20Tune%20520BT%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Loa Bluetooth Sony SRS-XB13","Sony Official Store","1390000","Âm thanh","980","4.9","https://tse1.mm.bing.net/th?q=Loa%20Bluetooth%20Sony%20SRS-XB13%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Micro thu âm HyperX SoloCast","HyperX Official","1290000","Âm thanh","640","4.7","https://tse1.mm.bing.net/th?q=Micro%20thu%20%C3%A2m%20HyperX%20SoloCast%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Tai nghe AirPods Pro 2","Apple Flagship Store","5990000","Âm thanh","870","4.9","https://tse1.mm.bing.net/th?q=Tai%20nghe%20AirPods%20Pro%202%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Soundbar Samsung HW-T420","Samsung Official Store","2490000","Âm thanh","320","4.7","https://tse1.mm.bing.net/th?q=Soundbar%20Samsung%20HW-T420%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Camera Wifi Ezviz C6N","Ezviz Official Store","790000","Thiết bị thông minh","1300","4.8","https://tse1.mm.bing.net/th?q=Camera%20Wifi%20Ezviz%20C6N%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Đồng hồ Xiaomi Redmi Watch 4","Xiaomi Authorized Store","2390000","Thiết bị thông minh","860","4.7","https://tse1.mm.bing.net/th?q=%C4%90%E1%BB%93ng%20h%E1%BB%93%20Xiaomi%20Redmi%20Watch%204%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Robot hút bụi Dreame","Dreame Official Store","5990000","Thiết bị thông minh","540","4.8","https://tse1.mm.bing.net/th?q=Robot%20h%C3%BAt%20b%E1%BB%A5i%20Dreame%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Ổ cắm điện thông minh TP-Link","TP-Link Official","450000","Thiết bị thông minh","980","4.6","https://tse1.mm.bing.net/th?q=%E1%BB%94%20c%E1%BA%AFm%20%C4%91i%E1%BB%87n%20th%C3%B4ng%20minh%20TP-Link%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Máy in Canon Pixma G3010","Canon Official Store","4290000","Văn phòng","430","4.7","https://tse1.mm.bing.net/th?q=M%C3%A1y%20in%20Canon%20Pixma%20G3010%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Ghế công thái học Sihoo","Sihoo Official Store","5890000","Văn phòng","310","4.8","https://tse1.mm.bing.net/th?q=Gh%E1%BA%BF%20c%C3%B4ng%20th%C3%A1i%20h%E1%BB%8Dc%20Sihoo%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Bàn học gỗ hiện đại","Modern Home","2490000","Nội thất","620","4.7","https://tse1.mm.bing.net/th?q=B%C3%A0n%20h%E1%BB%8Dc%20g%E1%BB%97%20hi%E1%BB%87n%20%C4%91%E1%BA%A1i%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Kệ sách 5 tầng","Home Decor VN","1590000","Nội thất","540","4.6","https://tse1.mm.bing.net/th?q=K%E1%BB%87%20s%C3%A1ch%205%20t%E1%BA%A7ng%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Nước hoa Dior Sauvage","Dior Beauty Official","890000","Làm đẹp","730","4.9","https://tse1.mm.bing.net/th?q=N%C6%B0%E1%BB%9Bc%20hoa%20Dior%20Sauvage%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Máy rửa mặt Foreo Luna","Foreo Official Store","3290000","Làm đẹp","410","4.8","https://tse1.mm.bing.net/th?q=M%C3%A1y%20r%E1%BB%ADa%20m%E1%BA%B7t%20Foreo%20Luna%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Serum Vitamin C La Roche-Posay","La Roche-Posay Official","850000","Làm đẹp","1200","4.9","https://tse1.mm.bing.net/th?q=Serum%20Vitamin%20C%20La%20Roche-Posay%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Apple Watch Series 9","Apple Flagship Store","11990000","Thiết bị thông minh","740","4.9","https://tse1.mm.bing.net/th?q=Apple%20Watch%20Series%209%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Samsung Galaxy Watch 6","Samsung Official Store","8990000","Thiết bị thông minh","620","4.8","https://tse1.mm.bing.net/th?q=Samsung%20Galaxy%20Watch%206%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"iPhone 14 Pro Max","Apple Flagship Store","25990000","Điện thoại","980","4.9","https://tse1.mm.bing.net/th?q=iPhone%2014%20Pro%20Max%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"ASUS ROG Zephyrus G14","ASUS Official Store","35990000","Laptop","210","4.9","https://tse1.mm.bing.net/th?q=ASUS%20ROG%20Zephyrus%20G14%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Lenovo Legion 5","Lenovo Official","28990000","Laptop","340","4.8","https://tse1.mm.bing.net/th?q=Lenovo%20Legion%205%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"MacBook Pro M3","Apple Flagship Store","42990000","Laptop","180","4.9","https://tse1.mm.bing.net/th?q=MacBook%20Pro%20M3%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"AirPods 3","Apple Flagship Store","4290000","Âm thanh","1300","4.8","https://tse1.mm.bing.net/th?q=AirPods%203%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Sony WH-1000XM5","Sony Official Store","7990000","Âm thanh","540","4.9","https://tse1.mm.bing.net/th?q=Sony%20WH-1000XM5%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Chuột Logitech G Pro X Superlight","Logitech G Official","3490000","Gaming","780","4.9","https://tse1.mm.bing.net/th?q=Chu%E1%BB%99t%20Logitech%20G%20Pro%20X%20Superlight%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Bàn phím Logitech G913","Logitech G Official","4290000","Gaming","430","4.8","https://tse1.mm.bing.net/th?q=B%C3%A0n%20ph%C3%ADm%20Logitech%20G913%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"RTX 4070 Gaming OC","Gigabyte Official","18990000","Linh kiện PC","150","4.9","https://tse1.mm.bing.net/th?q=RTX%204070%20Gaming%20OC%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"CPU Intel Core i7 14700K","Intel Official Store","10990000","Linh kiện PC","290","4.8","https://tse1.mm.bing.net/th?q=CPU%20Intel%20Core%20i7%2014700K%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"SSD Samsung 980 Pro 1TB","Samsung Official Store","2490000","Linh kiện PC","860","4.8","https://tse1.mm.bing.net/th?q=SSD%20Samsung%20980%20Pro%201TB%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"RAM Kingston Fury 32GB","Kingston Official","3290000","Linh kiện PC","740","4.7","https://tse1.mm.bing.net/th?q=RAM%20Kingston%20Fury%2032GB%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Máy pha cà phê Delonghi","Delonghi Official","6990000","Gia dụng","260","4.8","https://tse1.mm.bing.net/th?q=M%C3%A1y%20pha%20c%C3%A0%20ph%C3%AA%20Delonghi%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Máy lạnh Daikin Inverter","Daikin Official","12990000","Gia dụng","190","4.7","https://tse1.mm.bing.net/th?q=M%C3%A1y%20l%E1%BA%A1nh%20Daikin%20Inverter%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Tủ lạnh Panasonic 420L","Panasonic Mall","15990000","Gia dụng","170","4.8","https://tse1.mm.bing.net/th?q=T%E1%BB%A7%20l%E1%BA%A1nh%20Panasonic%20420L%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Bàn gaming chữ Z","Gaming Setup VN","2490000","Nội thất","620","4.7","https://tse1.mm.bing.net/th?q=B%C3%A0n%20gaming%20ch%E1%BB%AF%20Z%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Đèn LED RGB Gaming","Gaming Gear VN","590000","Gaming","2100","4.8","https://tse1.mm.bing.net/th?q=%C4%90%C3%A8n%20LED%20RGB%20Gaming%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"
+"Camera hành trình Xiaomi","Xiaomi Authorized Store","1890000","Thiết bị thông minh","930","4.7","https://tse1.mm.bing.net/th?q=Camera%20h%C3%A0nh%20tr%C3%ACnh%20Xiaomi%20product%20image&w=640&h=480&c=7&rs=1&p=0&o=5&dpr=1.3&pid=1.7"

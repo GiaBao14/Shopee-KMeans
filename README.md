@@ -101,6 +101,44 @@ Các cột chính:
 - `category`: danh mục sản phẩm
 - `buyer_count`: lượt mua
 - `rating`: điểm đánh giá
+- `image_url`: link ảnh sản phẩm online, dùng để hiển thị trên dashboard
+
+## Ảnh sản phẩm
+
+Dashboard ưu tiên hiển thị ảnh theo thứ tự:
+
+```text
+image_url trong data.csv
+image_path trong data.csv
+ảnh local trong data/images/products/
+ảnh mẫu theo danh mục trong data/images/placeholders/
+```
+
+Nếu muốn dùng ảnh local trong project, đặt ảnh vào thư mục:
+
+```text
+data/images/products/
+```
+
+Tên ảnh nên đặt theo dạng slug của tên sản phẩm. Ví dụ:
+
+```text
+data/images/products/iphone-15-128gb.jpg
+data/images/products/samsung-galaxy-s24.jpg
+data/images/products/macbook-air-m2-13-inch.jpg
+```
+
+Nếu chưa có ảnh thật, dashboard sẽ tự dùng ảnh mẫu theo danh mục trong:
+
+```text
+data/images/placeholders/
+```
+
+Các định dạng được hỗ trợ:
+
+```text
+.jpg, .jpeg, .png, .webp, .svg
+```
 
 ## Kết quả đầu ra
 

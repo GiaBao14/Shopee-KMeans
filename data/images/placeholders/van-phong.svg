@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#f8fafc"/>
+  <rect x="160" y="145" width="320" height="210" rx="18" fill="#64748b"/>
+  <rect x="195" y="175" width="250" height="35" rx="8" fill="#e2e8f0"/>
+  <rect x="195" y="235" width="250" height="35" rx="8" fill="#e2e8f0"/>
+  <rect x="195" y="295" width="160" height="35" rx="8" fill="#e2e8f0"/>
+  <text x="320" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#243447">Văn phòng</text>
+</svg>

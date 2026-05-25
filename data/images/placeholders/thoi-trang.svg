@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#fff7ed"/>
+  <path d="M250 95 L210 135 L145 175 L185 245 L225 225 V365 H415 V225 L455 245 L495 175 L430 135 L390 95 C360 125 280 125 250 95 Z" fill="#fb923c"/>
+  <path d="M270 105 C290 135 350 135 370 105" fill="none" stroke="#fff7ed" stroke-width="12"/>
+  <text x="320" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#243447">Thời trang</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#f5f3ff"/>
+  <rect x="160" y="125" width="120" height="230" rx="24" fill="#7c3aed"/>
+  <rect x="360" y="125" width="120" height="230" rx="24" fill="#7c3aed"/>
+  <circle cx="220" cy="205" r="32" fill="#ddd6fe"/>
+  <circle cx="220" cy="290" r="42" fill="#ddd6fe"/>
+  <circle cx="420" cy="205" r="32" fill="#ddd6fe"/>
+  <circle cx="420" cy="290" r="42" fill="#ddd6fe"/>
+  <text x="320" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#243447">Âm thanh</text>
+</svg>

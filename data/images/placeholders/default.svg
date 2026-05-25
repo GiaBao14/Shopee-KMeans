@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#f6f7fb"/>
+  <rect x="70" y="70" width="500" height="340" rx="24" fill="#ffffff" stroke="#d9dee8" stroke-width="4"/>
+  <circle cx="210" cy="200" r="55" fill="#d9e7ff"/>
+  <path d="M145 340 L265 235 L345 300 L405 255 L505 340 Z" fill="#9bbcf4"/>
+  <text x="320" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#243447">Sản phẩm</text>
+</svg>
